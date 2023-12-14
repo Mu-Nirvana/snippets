@@ -1,4 +1,5 @@
 import re
+import sys
 
 def extract_variables(tf_file_path):
     with open(tf_file_path, 'r') as tf_file:
@@ -11,7 +12,7 @@ def extract_variables(tf_file_path):
     return variables
 
 # Example usage:
-terraform_file_path = 'test.tf'
+terraform_file_path = sys.argv[1]
 variable_names = extract_variables(terraform_file_path)
 
 
